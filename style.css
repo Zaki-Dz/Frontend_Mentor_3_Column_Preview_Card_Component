@@ -1,0 +1,97 @@
+:root {
+	--sedan: #e28525;
+	--suv: #016972;
+	--luxury: #00403f;
+	--transition: 0.3s;
+	--p: #fffd;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: roboto, Arial, sans-serif;
+}
+
+main {
+	min-height: 100vh;
+	background-color: #f2f2f2;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 2rem 1rem;
+}
+
+.cards {
+	max-width: 1000px;
+	display: flex;
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+@media (max-width: 900px) {
+	.cards {
+		flex-direction: column;
+		max-width: 400px;
+	}
+}
+
+.card {
+	padding: 3rem 2rem;
+	color: white;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 20px;
+}
+
+.card.sedan {
+	background-color: var(--sedan);
+}
+
+.card.suv {
+	background-color: var(--suv);
+}
+
+.card.luxury {
+	background-color: var(--luxury);
+}
+
+.title {
+	text-transform: uppercase;
+}
+
+.description {
+	margin-bottom: 3rem;
+	font-size: 0.8rem;
+	color: var(--p);
+}
+
+.more {
+	background-color: white;
+	border: 2px solid white;
+	border-radius: 2rem;
+	padding: 0.5rem 1rem;
+	text-decoration: none;
+	transition: var(--transition);
+}
+
+.sedan .more {
+	color: var(--sedan);
+}
+
+.suv .more {
+	color: var(--suv);
+}
+
+.luxury .more {
+	color: var(--luxury);
+}
+
+.more:hover {
+	color: white;
+	background-color: transparent;
+}
